@@ -13,5 +13,22 @@ function logPlayer(name: string): void {
     console.log(`New game starting for player: ${name}`)
 }
 
-document.getElementById("startGame")!.addEventListener("click", startGame);
 
+function getInputValue(elementId: string): string | undefined {
+    //add assertiong that the element is the more specific HTMLINputELement type
+    const inputElement: HTMLInputElement = <HTMLInputElement>document.getElementById(elementId);
+
+    if (inputElement.value === "") {
+        return undefined;
+    } else {
+        return inputElement.value;
+    }
+}
+
+function postScore(score: number, playerName: string): void {
+    //posting the score and handeling if there isnt anything in  there yet by user
+    const scoreElement: HTMLElement | null = document.getElementById("postedScores");
+    scoreElement!.innerText = `${score} - ${playerName}`;
+}
+
+document.getElementById("startGame")!.addEventListener("click", startGame);
