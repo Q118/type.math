@@ -58,5 +58,10 @@ function logError(err: string): void {
     console.log(err);
 }
 
-
-
+//woah it knows the deffintion of RESUlt even tho its in a diff file...
+let myResult: Result = {
+    playerName: "",
+    score: 0,
+    problemCount: 0,
+    factor: 0
+}
