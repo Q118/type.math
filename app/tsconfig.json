@@ -2,8 +2,13 @@
     "extends": "../tsconfig.base",
     "compilerOptions": {
         "removeComments": true,
+        "outFile": "../js/app.js"  //this gets refereced in index.html
     },
-    "include": [
-        "./**/*"
+    // "include": [
+    //     "./**/*" // this line is the reason we are able to reference vars from other files.. include all ts files to compile.. but thats only for developing need to do the connecting to have it work post-build
+    // ]
+    "files":[ //array of all files u want the compiler to compile
+        "./app.ts"  //app starting point
+
     ]
 }

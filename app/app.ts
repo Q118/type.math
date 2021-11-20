@@ -1,3 +1,6 @@
+//use if for bigger apps.. just tyoe 'ref'
+/// <reference path="player.ts" />
+
 function startGame() {
     // starting a new game
 
@@ -59,9 +62,19 @@ function logError(err: string): void {
 }
 
 //woah it knows the deffintion of RESUlt even tho its in a diff file...
-let myResult: Result = {
-    playerName: "",
-    score: 0,
-    problemCount: 0,
-    factor: 0
-}
+// let myResult: Result = {
+//     playerName: "",
+//     score: 0,
+//     problemCount: 0,
+//     factor: 0
+// }
+
+// let player: Person = {
+//     name: "Daniel",
+//     formatName: () => 'Daniel'
+// }
+
+//new class instance
+const firstPlayer: Player = new Player();
+firstPlayer.name = "Daniel";
+console.log(firstPlayer.formatName());
