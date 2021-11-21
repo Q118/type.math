@@ -2,7 +2,10 @@
     "extends": "../tsconfig.base",
     "compilerOptions": {
         "removeComments": true,
-        "outFile": "../js/app.js"  //this gets refereced in index.html
+       // "outFile": "../js/app.js"  this gets refereced in index.html (use if not production and/or not needing modules such as a small app)
+       "module": "commonjs",
+       "moduleResolution": "node",
+       "traceResolution":  true,
     },
     // "include": [
     //     "./**/*" // this line is the reason we are able to reference vars from other files.. include all ts files to compile.. but thats only for developing need to do the connecting to have it work post-build
